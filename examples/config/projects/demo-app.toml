@@ -1,0 +1,11 @@
+path = "~/workspace/demo-app"
+shell = "/bin/bash"
+profile = "backend-safe"
+env_file = ".env"
+extra_paths = ["./bin", "./node_modules/.bin"]
+extra_mounts = ["~/.cache"]
+
+[env]
+APP_ENV = "development"
+DATABASE_URL = "postgres://localhost:5432/demo_dev"
+PORT = "8080"

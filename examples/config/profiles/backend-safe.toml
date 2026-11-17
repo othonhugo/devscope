@@ -1,0 +1,2 @@
+allow = []
+block = ["ssh", "scp", "sftp", "telnet", "nc"]

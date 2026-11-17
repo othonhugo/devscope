@@ -1,0 +1,16 @@
+[defaults]
+shell = "/bin/bash"
+passthrough_env = [
+  "TERM",
+  "USER",
+  "LOGNAME",
+  "HOME",
+  "LANG",
+  "LC_ALL",
+  "DISPLAY",
+  "WAYLAND_DISPLAY",
+  "XDG_RUNTIME_DIR",
+  "SSH_AUTH_SOCK"
+]
+base_path = "/usr/local/bin:/usr/bin:/bin"
+strict_namespace = true
