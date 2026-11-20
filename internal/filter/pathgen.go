@@ -16,7 +16,7 @@ var CoreBinaries = []string{
 
 // BuildSyntheticPath cria uma symlink farm temporária contendo apenas os binários
 // autorizados pelo perfil (allow-list / block-list).
-func BuildSyntheticPath(basePath string, prof *config.ProfileConfig) (string, func(), error) {
+func BuildSyntheticPath(basePath string, prof *config.ProfileConfig, allowSudo bool) (string, func(), error) {
 	runDir := os.Getenv("XDG_RUNTIME_DIR")
 	if runDir == "" {
 		runDir = os.TempDir()
@@ -63,7 +63,7 @@ func BuildSyntheticPath(basePath string, prof *config.ProfileConfig) (string, fu
 			}
 			name := entry.Name()
 
-			if blockSet[name] {
+			if blockSet[name] || (name == "sudo" && !allowSudo) {
 				continue
 			}
 			if len(allowSet) > 0 && !allowSet[name] {

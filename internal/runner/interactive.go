@@ -21,7 +21,7 @@ func StartInteractiveSession(global *config.GlobalConfig, proj *config.ProjectCo
 		return 1, err
 	}
 
-	synthBin, cleanupBin, err := filter.BuildSyntheticPath(global.Defaults.BasePath, prof)
+	synthBin, cleanupBin, err := filter.BuildSyntheticPath(global.Defaults.BasePath, prof, global.Defaults.AllowSudo)
 	if err != nil {
 		return 1, err
 	}

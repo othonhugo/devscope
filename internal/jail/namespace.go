@@ -60,8 +60,7 @@ func RunNamespaceBootstrap() error {
 
 	if payload.StrictNS {
 		if err := setupIsolatedMounts(&payload); err != nil {
-			// Caso o ambiente (ex: container Docker restrito) bloqueie mount, avisa e segue com chdir
-			fmt.Fprintf(os.Stderr, "devscope [aviso]: mount namespace parcial (%v); mantendo trava de shell.\n", err)
+			return fmt.Errorf("isolamento estrito de mounts falhou; sessão cancelada: %w", err)
 		}
 	}
 

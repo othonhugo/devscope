@@ -41,7 +41,7 @@ func RunShebangScript(global *config.GlobalConfig, scriptPath string, scriptArgs
 		return 1, err
 	}
 
-	synthBin, cleanupBin, err := filter.BuildSyntheticPath(global.Defaults.BasePath, prof)
+	synthBin, cleanupBin, err := filter.BuildSyntheticPath(global.Defaults.BasePath, prof, global.Defaults.AllowSudo)
 	if err != nil {
 		return 1, err
 	}
@@ -99,9 +99,10 @@ func RunShebangScript(global *config.GlobalConfig, scriptPath string, scriptArgs
 }
 
 // detectInterpreter lê até as 5 primeiras linhas do script procurando diretivas como:
-//   # devscope: python3 -u
-//   // devscope: node
-//   -- devscope: lua
+//
+//	# devscope: python3 -u
+//	// devscope: node
+//	-- devscope: lua
 func detectInterpreter(scriptPath string, proj *config.ProjectConfig, synthBin string) ([]string, error) {
 	f, err := os.Open(scriptPath)
 	if err != nil {

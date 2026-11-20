@@ -14,3 +14,4 @@ passthrough_env = [
 ]
 base_path = "/usr/local/bin:/usr/bin:/bin"
 strict_namespace = true
+allow_sudo = false

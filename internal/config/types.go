@@ -10,6 +10,7 @@ type DefaultsConfig struct {
 	PassthroughEnv  []string `toml:"passthrough_env"`
 	BasePath        string   `toml:"base_path"`
 	StrictNamespace bool     `toml:"strict_namespace"`
+	AllowSudo       bool     `toml:"allow_sudo"`
 }
 
 // ProjectConfig representa ~/.config/devscope/projects/<project>.toml

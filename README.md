@@ -17,6 +17,8 @@ sudo install -m 0755 devscope /usr/bin/devscope
 
 ## Configuração Rápida
 
+Por padrão, `sudo` não é incluído no `PATH` da sessão. Para permitir o comando, defina `allow_sudo = true` em `[defaults]` no `config.toml`; perfis com `allow` também precisam incluir `sudo`, se usarem allow-list.
+
 ```bash
 mkdir -p ~/.config/devscope/{projects,profiles} ~/workspace/demo-app
 cp examples/config/config.toml ~/.config/devscope/
