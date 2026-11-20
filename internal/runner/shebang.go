@@ -10,10 +10,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/devscope/devscope/internal/config"
-	"github.com/devscope/devscope/internal/env"
-	"github.com/devscope/devscope/internal/filter"
-	"github.com/devscope/devscope/internal/jail"
+	"github.com/othonhugo/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/env"
+	"github.com/othonhugo/devscope/internal/filter"
+	"github.com/othonhugo/devscope/internal/jail"
 )
 
 // RunShebangScript executa um script invocado via #!/usr/bin/devscope.

@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/devscope/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/config"
 )
 
 // BuildCleanEnv cria um ambiente do zero (estilo env -i), preservando apenas

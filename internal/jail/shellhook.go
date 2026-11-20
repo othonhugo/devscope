@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/devscope/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/config"
 )
 
 // PrepareShellInit gera arquivos de inicialização efêmeros para Bash ou Zsh que:

@@ -5,9 +5,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/devscope/devscope/internal/config"
-	"github.com/devscope/devscope/internal/jail"
-	"github.com/devscope/devscope/internal/runner"
+	"github.com/othonhugo/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/jail"
+	"github.com/othonhugo/devscope/internal/runner"
 )
 
 func main() {

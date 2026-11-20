@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"syscall"
 
-	"github.com/devscope/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/config"
 )
 
 const InternalBootstrapArg = "__devscope_ns_init"

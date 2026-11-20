@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/devscope/devscope/internal/config"
+	"github.com/othonhugo/devscope/internal/config"
 )
 
 // CoreBinaries são mantidos mesmo em perfis allow-list estritos para não quebrar os hooks do shell
